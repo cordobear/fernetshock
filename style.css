@@ -1,25 +1,41 @@
-header img {
-    width: 100%; /* Ocupa el 100% del ancho de su contenedor */
-    height: auto; /* Mantiene la proporción para que no se deforme */
-    display: block; /* Opcional, para evitar espacios en blanco indeseados */
+.strada {
+    font-family: sans-serif;
+    }
+
+.siena {
+  text-align: center;
 }
 
 nav ul {
-  list-style: none; /* Esto saca los puntitos de la lista */
-  margin: 0;      /* Elimina el espacio exterior */
-  padding: 0;     /* Elimina el espacio interior */
-  
-  /* ¡La magia para ponerlo horizontal! */
-  display: flex; 
-  justify-content: center; /* Opcional: Esto los alinea a la izquierda */
+  display: flex;
+  justify-content: center; /* Centra toda la fila de imágenes */
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  flex-wrap: wrap; /* Permitimos que bajen de línea si no entran */
 }
 
-/* Estilos de los links para que se vean como botones */
-nav li a {
-  display: block;            /* Hace que el link ocupe todo el espacio del "li" */
-  padding: 15px;             /* Le da un espacio interno para que se vea más grande */
-  text-decoration: none;     /* Saca el subrayado de los links */
-  color: #333;               /* El color del texto */
-  font-family: sans-serif;   /* La fuente que quieras usar */
+nav ul li {
+  margin: 10px; /* Espacio entre las imágenes */
 }
 
+nav ul li img {
+  width: 200px; /* Le damos un ancho fijo para que no se hagan gigantes */
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column; /* Apila las imágenes una abajo de la otra */
+    align-items: center; /* Centra la columna entera */
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Espacio arriba y abajo entre las imágenes */
+  }
+
+  nav ul li img {
+    width: 90%; /* Le damos un 90% para que se vean grandes pero con un margen */
+  }
+}
