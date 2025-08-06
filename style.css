@@ -6,36 +6,40 @@
   text-align: center;
 }
 
+/* Este código es para pantallas grandes (computadoras) */
 nav ul {
   display: flex;
   justify-content: center; /* Centra toda la fila de imágenes */
   list-style: none;
   padding: 0;
   margin: 20px 0;
-  flex-wrap: wrap; /* Permitimos que bajen de línea si no entran */
+  flex-wrap: wrap; 
 }
 
 nav ul li {
-  margin: 10px; /* Espacio entre las imágenes */
+  margin: 0; /* Esto es lo que saca el espacio entre las imágenes */
 }
 
 nav ul li img {
-  width: 200px; /* Le damos un ancho fijo para que no se hagan gigantes */
+  width: 200px; 
   height: auto;
   display: block;
 }
 
+/* ---------------------------------------------------- */
+/* Este código es para pantallas chicas (celulares)     */
+/* ---------------------------------------------------- */
 @media (max-width: 600px) {
   nav ul {
-    flex-direction: column; /* Apila las imágenes una abajo de la otra */
-    align-items: center; /* Centra la columna entera */
+    flex-direction: column;
+    align-items: center; 
   }
 
   nav ul li {
-    margin: 10px 0; /* Espacio arriba y abajo entre las imágenes */
+    margin: 10px 0; /* Dejamos este margen para que se separen en celular */
   }
 
   nav ul li img {
-    width: 90%; /* Le damos un 90% para que se vean grandes pero con un margen */
+    width: 90%; 
   }
 }
