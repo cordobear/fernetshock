@@ -43,3 +43,9 @@ nav ul li img {
     width: 90%; 
   }
 }
+
+header img {
+  width: 100%; /* La magia: hace que la imagen ocupe el 100% del ancho */
+  height: auto; /* Esto mantiene la proporción para que no se deforme */
+  display: block; /* Opcional: evita espacios en blanco debajo de la imagen */
+}
