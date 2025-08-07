@@ -1,9 +1,92 @@
+body {
+  background: linear-gradient(to bottom, #4a007a, #9e00c2); /* De un violeta oscuro a uno claro */
+  background-attachment: fixed;
+}
+
+@font-face {
+  font-family: 'GFAM';
+  src: url('fuentes/GFAMComic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'manrope';
+  src: url('fuentes/manrope-semibold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .strada {
-    font-family: sans-serif;
-    }
+    font-family: 'GFAM', sans-serif;
+    color: white;
+}
+
+.palio {
+    font-family: 'manrope', sans-serif;
+    color: white;
+}
 
 .siena {
   text-align: center;
+}
+
+.adventure {
+  font-weight: bold; /* Esta es la propiedad para la negrita */
+  font-size: 24px;   /* Tamaño del texto */
+  color: #333; 
+}
+
+.argo {
+  max-width: 1200px; /* Esto hace que el elemento no sea más grande que 1200px */
+  width: 90%;       /* Pero que ocupe el 90% del espacio disponible si es más chico */
+  word-wrap: break-word;
+  margin: 0 auto;
+}
+
+.caja-texto {
+  /* Lo sacamos del flujo normal para que no empuje nada */
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Esto lo centra perfectamente en la pantalla */
+  
+  max-width: 80%; /* Para que en el celu no sea tan grande */
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1000; /* Lo pone por encima de todo lo demás */
+  
+  /* Animacion de entrada/salida */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+/* Esta clase lo hace visible */
+.caja-texto.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#cerrar-texto {
+  /* Acá van los estilos del botón de cerrar que ya tenías */
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav ul li a img {
+  transition: filter 0.5s ease-in-out;
+}
+
+/* Y esto es lo que pasa cuando el mouse está encima */
+nav ul li a:hover img {
+  filter: brightness(1.5); /* 1.1 = 10% más de brillo */
 }
 
 /* Este código es para pantallas grandes (computadoras) */
