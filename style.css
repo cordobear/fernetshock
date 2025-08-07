@@ -1,6 +1,21 @@
 body {
-  background: linear-gradient(to bottom, #4a007a, #9e00c2); /* De un violeta oscuro a uno claro */
-  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  position: relative; 
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("wall.jpg"); /* La ruta de tu imagen */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.4; /* ¡Acá es donde le das el 60% de opacidad! */
+  z-index: -1; /* Esto lo pone detrás de todo el contenido */
 }
 
 @font-face {
@@ -29,7 +44,21 @@ body {
 
 .siena {
   text-align: center;
+  padding-left: 0;
+  padding-right: 0; 
 }
+
+.albea {
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0; 
+  background-color: yellow;
+}
+
+.bora {
+  font-family: 'manrope', sans-serif;
+  color: black;
+  }
 
 .adventure {
   font-weight: bold; /* Esta es la propiedad para la negrita */
@@ -44,40 +73,24 @@ body {
   margin: 0 auto;
 }
 
-.caja-texto {
-  /* Lo sacamos del flujo normal para que no empuje nada */
-  position: absolute; 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Esto lo centra perfectamente en la pantalla */
-  
-  max-width: 80%; /* Para que en el celu no sea tan grande */
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  border-radius: 5px;
-  z-index: 1000; /* Lo pone por encima de todo lo demás */
-  
-  /* Animacion de entrada/salida */
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+.mobi {
+  padding: 10 20px;
 }
 
-/* Esta clase lo hace visible */
-.caja-texto.visible {
-  opacity: 1;
-  visibility: visible;
+.autor-foto {
+  width: 150px;           /* Le da un tamaño fijo a la imagen */
+  height: auto;
 }
 
-#cerrar-texto {
-  /* Acá van los estilos del botón de cerrar que ya tenías */
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 20px;
+.autor-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.autor-info h3,
+.autor-info h4 {
+  margin: 0;
 }
 
 nav ul li a img {
@@ -114,12 +127,19 @@ nav ul li img {
 /* ---------------------------------------------------- */
 @media (max-width: 600px) {
   nav ul {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center; 
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
   }
 
   nav ul li {
-    margin: 10px 0; /* Dejamos este margen para que se separen en celular */
+    width: 33.33%; /* Esto hace que entren 3 li en una fila (100% / 3) */
+    margin: 0;
+    padding: 5px; /* Un pequeño padding para que no se peguen */
   }
 
   nav ul li img {
@@ -131,4 +151,117 @@ header img {
   width: 100%; /* La magia: hace que la imagen ocupe el 100% del ancho */
   height: auto; /* Esto mantiene la proporción para que no se deforme */
   display: block; /* Opcional: evita espacios en blanco debajo de la imagen */
+}
+
+.texto-destacado {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row; 
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.texto-destacado::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0; bottom: 0;
+  height: auto; /* Podés ajustar la altura de la caja */
+  background-color: yellow;
+  z-index: -1; /* Esto lo pone por detrás del texto */
+}
+
+.redes img {
+  width: 80px;  /* Le damos un tamaño que se vea bien en mobile */
+  height: auto;
+}
+
+.clio {
+  width: 55%;
+  height: auto;
+}
+
+/* ------------------------------------------------ */
+
+/* Esta es la regla especial para pantallas de PC */
+@media (min-width: 768px) {
+  .redes img {
+    width: 50px; /* Reducimos el tamaño para pantallas grandes (PC, tablets) */
+  }
+}
+
+footer {
+  background-color: #004d00; /* Un verde oscuro */
+  color: black;             /* Para que el texto sea legible */
+  padding: 20px;            /* Un poco de espacio para que no esté todo pegado */
+  text-align: center;       /* Para que el contenido del footer esté centrado */
+  display: flex;
+  align-items: center;
+  flex-direction: row; /* Esto apila los elementos uno encima del otro */
+  justify-content: center; /* Esto centra los elementos verticalmente */
+  gap: 40px;               /* Le da un poco de espacio entre las dos secciones */
+}
+
+.uno h2 {
+  margin: 0;
+}
+
+.uno h3 {
+  margin: 0;
+}
+
+footer h3 {
+  margin: 0;
+}
+
+.bysa img {
+  width: 150px;  /* Le damos un tamaño que se vea bien en mobile */
+  height: auto;
+  vertical-align: middle;
+  }
+
+.albea h3 {
+  font-size: 22px; /* Tamaño normal para PC */
+}
+
+.albea h4 {
+  font-size: 16px; /* Tamaño normal para PC */
+}
+
+  @media (max-width: 767px) {
+  .texto-destacado {
+    flex-direction: column; /* Apila la foto y el texto en mobile */
+    align-items: center;    /* Los centra horizontalmente */
+    padding: 15px;
+  }
+  
+  .autor-foto {
+    width: 35%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .autor-info {
+    display: block !important; /* También lo hacemos con el texto */
+    width: 90% !important;
+  }
+
+  .albea h3 {
+    font-size: 18px;
+  }
+
+  .albea h4 {
+    font-size: 12px;
+  }
+
+  .panda h2 {
+    font-size: 16px;
+  }
+
+  header img {
+    content: url("bannermobile.jpg"); /* La imagen exclusiva para mobile */
+  }
 }
