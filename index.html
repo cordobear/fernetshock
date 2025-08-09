@@ -43,34 +43,13 @@
 </div>
 </div>
 </p>
-<div id="footer" data-repo="fernetshock"></div>
+<div id="footer"></div>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const footerPlaceholder = document.getElementById('footer');
-    const repoName = footerPlaceholder.dataset.repo;
-    const isLocal = window.location.protocol === 'file:';
-    let basePath = '';
-
-    if (!isLocal) {
-        basePath = '/' + repoName;
-    }
-
-    fetch('../footer.html')
-      .then(response => response.text())
-      .then(data => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(data, 'text/html');
-        const images = doc.querySelectorAll('img');
-        
-        images.forEach(img => {
-            if (!img.src.startsWith('http')) {
-                img.src = basePath + img.src;
-            }
-        });
-
-        footerPlaceholder.innerHTML = doc.body.innerHTML;
-      });
-  });
+  fetch('../../footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
 </script>
 </body>
 </html>
