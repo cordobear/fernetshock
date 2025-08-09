@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> La Estatua </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header>
+    <a href="../../index.html">
+    <img src="../../banner.jpg" alt="Banner Fernet Shock">
+    </a>
+</header>
+<div class="perla">
+    <h2 class="texto-destacado panda bora perla">La Estatua</h2>
+    <div class="fernet">
+  <img src="301.jpg" alt="301">
+  <img src="302.jpg" alt="302">
+  <img src="303.jpg" alt="303">
+  <img src="304.jpg" alt="304">
+  <img src="305.jpg" alt="305">
+  <img src="306.jpg" alt="306">
+  <img src="307.jpg" alt="307">
+  <img src="308.jpg" alt="308">
+  <img src="309.jpg" alt="309">
+  <img src="310.jpg" alt="310">
+  <div class="navegacion">
+  <a href="../erks02/erks02.html" class="boton-navegacion">Otra aventura del Pela</a>
+  <a href="../erks04/erks04.html" class="boton-navegacion">Un poquitito violento</a>
+</div>
+</div>
+<div id="footer"></div>
+<script>
+  fetch('../../footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+</body>
+</html>
+

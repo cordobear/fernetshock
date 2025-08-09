@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>El inglés es caraso</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header>
+    <a href="../../index.html">
+    <img src="../../banner.jpg" alt="Banner Fernet Shock">
+    </a>
+</header>
+<div class="perla">
+    <h2 class="texto-destacado panda bora perla">El inglés es caraso</h2>
+    <div class="fernet">
+  <img src="01.jpg" alt="21">
+  <img src="02.jpg" alt="02">
+  <img src="03.jpg" alt="03">
+  <img src="04.jpg" alt="04">
+  <img src="05.jpg" alt="05">
+  <img src="06.jpg" alt="06">
+  <img src="07.jpg" alt="07">
+  <img src="08.jpg" alt="08">
+  <div class="navegacion">
+  <a href="../cg02/cg02.html" class="boton-navegacion">Josko y el stream del conicet</a>
+</div>
+</div>
+<div id="footer"></div>
+<script>
+  fetch('../../footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+</body>
+</html>
+

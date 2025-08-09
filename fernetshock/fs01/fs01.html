@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> El mostro hecho de basura </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header>
+    <a href="../../index.html">
+    <img src="../../banner.jpg" alt="Banner Fernet Shock">
+    </a>
+</header>
+<div class="perla">
+    <h2 class="texto-destacado panda bora perla">El mostro hecho de basura</h2>
+    <div class="fernet">
+  <img src="3301.jpg" alt="3301">
+  <img src="3302.jpg" alt="3302">
+  <img src="3303.jpg" alt="3303">
+  <img src="3304.jpg" alt="3304">
+  <img src="3305.jpg" alt="3305">
+  <img src="3306.jpg" alt="3306">
+  <img src="3307.jpg" alt="3307">
+  <img src="3308.jpg" alt="3308">
+  <img src="3309.jpg" alt="3309">
+  <div class="navegacion">
+  <a href="../fs02/fs02.html" class="boton-navegacion">Chori Girl contra los sanguches de milanesa</a>
+</div>
+</div>
+<div id="footer"></div>
+<script>
+  fetch('../../footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+</body>
+</html>
+

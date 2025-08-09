@@ -37,9 +37,22 @@ body::before {
     color: white;
 }
 
+.weekend {
+    font-family: 'manrope', sans-serif;
+    color: white;
+    text-align: center;
+    padding-left: 20;
+    padding-right: 20; 
+    margin-left: 20px;
+}
+
 .palio {
     font-family: 'manrope', sans-serif;
     color: white;
+}
+
+.perla {
+  text-align: center;
 }
 
 .siena {
@@ -194,7 +207,7 @@ header img {
 }
 
 footer {
-  background-color: #004d00; /* Un verde oscuro */
+  background-color: #45551f; /* Un verde oscuro */
   color: black;             /* Para que el texto sea legible */
   padding: 20px;            /* Un poco de espacio para que no esté todo pegado */
   text-align: center;       /* Para que el contenido del footer esté centrado */
@@ -222,6 +235,7 @@ footer h3 {
   height: auto;
   vertical-align: middle;
   }
+
 
 .albea h3 {
   font-size: 22px; /* Tamaño normal para PC */
@@ -262,6 +276,70 @@ footer h3 {
   margin: 0 auto;
   font-family: 'manrope', sans-serif;
   color: black;
+}
+
+.fernet {
+  max-width: 800px; /* Le da un ancho máximo al contenedor */
+  margin: 20px auto; /* Lo centra en la página */
+}
+
+.fernet img {
+  max-width: 100%; /* La imagen nunca será más ancha que su contenedor */
+  height: auto; /* Mantiene la proporción para que no se deforme */
+  display: block; /* Para que cada imagen ocupe su propia línea */
+  margin-bottom: 0px; /* Un poco de espacio entre cada página */
+}
+
+.boton-navegacion {
+  display: block; /* Para que ocupe toda la línea */
+  width: 200px;
+  margin: 20px 0; /* Lo centra y le da un poco de espacio */
+  padding: 10px;
+
+  background-color: #007bff; /* Color azul, lo podés cambiar */
+  color: white;
+  text-align: center;
+  text-decoration: none; /* Le saca el subrayado */
+  border-radius: 5px; /* Bordes redondeados */
+  font-family: 'manrope', sans-serif;
+}
+
+.navegacion {
+  display: flex !important;
+  justify-content: space-between; !important; /* Esto empuja el botón hacia la derecha */
+  width: 100%; /* Nos aseguramos de que ocupe todo el ancho disponible */
+  margin-top: 20px;
+}
+
+.perla .texto-destacado {
+  text-align: center !important; /* ¡Esto le gana a cualquier otra regla! */
+  display: block !important; /* Nos aseguramos de que se comporte como un bloque */
+}
+
+.perla .texto-destacado::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0; bottom: 0;
+  height: auto; 
+  background-color: yellow;
+  z-index: -1; 
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: center; /* Centra toda la fila de imágenes */
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  flex-wrap: wrap; 
+  gap: 20px; /* Esto agrega 20px de espacio entre cada ícono y el mail */
+}
+
+.fiorino {
+  margin-left: 10px;
+  margin-top: 12px;
 }
 
   @media (max-width: 767px) {

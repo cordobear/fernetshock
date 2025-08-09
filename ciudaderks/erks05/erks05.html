@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Acá hay algo raro </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header>
+    <a href="../../index.html">
+    <img src="../../banner.jpg" alt="Banner Fernet Shock">
+    </a>
+</header>
+<div class="perla">
+    <h2 class="texto-destacado panda bora perla">Acá hay algo raro</h2>
+    <div class="fernet">
+  <img src="501.jpg" alt="501">
+  <img src="502.jpg" alt="502">
+  <img src="503.jpg" alt="503">
+  <img src="504.jpg" alt="504">
+  <img src="505.jpg" alt="505">
+  <img src="506.jpg" alt="506">
+  <img src="507.jpg" alt="507">
+  <img src="508.jpg" alt="508">
+  <img src="509.jpg" alt="509">
+  <img src="510.jpg" alt="510">
+  <div class="navegacion">
+  <a href="../erks04/erks04.html" class="boton-navegacion">Un poquitito violento</a>
+  <a href="../erks06/erks06.html" class="boton-navegacion">Lo malo de ser bueno</a>
+</div>
+</div>
+<div id="footer"></div>
+<script>
+  fetch('../../footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Buen día, mundo cruel! </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header>
+    <a href="../../index.html">
+    <img src="../../banner.jpg" alt="Banner Fernet Shock">
+    </a>
+</header>
+<div class="perla">
+    <h2 class="texto-destacado panda bora perla">Buen día, mundo cruel!</h2>
+    <div class="fernet">
+  <img src="EK101.jpg" alt="101">
+  <img src="EK102.jpg" alt="102">
+  <img src="EK103.jpg" alt="103">
+  <img src="EK104.jpg" alt="104">
+  <img src="EK105.jpg" alt="105">
+  <img src="EK106.jpg" alt="106">
+  <img src="EK107.jpg" alt="107">
+  <img src="EK108.jpg" alt="108">
+  <img src="EK109.jpg" alt="109">
+  <img src="EK110.jpg" alt="110">
+  <div class="navegacion">
+  <a href="../erks02/erks02.html" class="boton-navegacion">Otra aventura del Pela</a>
+</div>
+</div>
+<div id="footer"></div>
+<script>
+  fetch('../../footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+</body>
+</html>
+

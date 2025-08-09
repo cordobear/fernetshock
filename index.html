@@ -43,25 +43,14 @@
 </div>
 </div>
 </p>
-
-<footer>
-<div class="siena">
-<div class="redes">
-    <h3 class="strada palio"> Visitame! </h3>
-    <nav>
-        <ul>
-    <li><a href="https://www.instagram.com/thecordobear"><img id= "instagram" src="redesinsta.jpg" alt="Visitá Instagram"></a></li>
-    <li><a href="https://x.com/thecordobear"><img id="x" src="redestwitter.jpg" alt="Visitá X"></a></li>
-    <li><a href="https://www.linkedin.com/in/david-ochoa-comms"><img id= "linkedin" src="redeslinkedin.jpg" alt="Negociemos en Linkedin!"></a></li>
-    <li><a href="https://mpago.la/1s4EKdQ"><img id= "mercadopago" src="redesmp.jpg" alt="Donaciones!"></a></li>
-        </ul>
-    </nav>
-</div>
-</div>
-<div class="bysa">
-    <img src="bysa.jpg" alt="copyleft by nc sa">
-</div>
-</footer>
+<div id="footer"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
 </body>
 </html>
 

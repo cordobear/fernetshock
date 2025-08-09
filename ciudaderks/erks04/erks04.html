@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Un poquitito violento </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header>
+    <a href="../../index.html">
+    <img src="../../banner.jpg" alt="Banner Fernet Shock">
+    </a>
+</header>
+<div class="perla">
+    <h2 class="texto-destacado panda bora perla">Un poquitito violento</h2>
+    <div class="fernet">
+  <img src="401.jpg" alt="401">
+  <img src="402.jpg" alt="402">
+  <img src="403.jpg" alt="403">
+  <img src="404.jpg" alt="404">
+  <img src="405.jpg" alt="405">
+  <img src="406.jpg" alt="406">
+  <img src="407.jpg" alt="407">
+  <img src="408.jpg" alt="408">
+  <img src="409.jpg" alt="409">
+  <img src="410.jpg" alt="410">
+  <div class="navegacion">
+  <a href="../erks03/erks03.html" class="boton-navegacion">La Estatua</a>
+  <a href="../erks05/erks05.html" class="boton-navegacion">Acá hay algo raro</a>
+</div>
+</div>
+<div id="footer"></div>
+<script>
+  fetch('../../footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+</body>
+</html>
+

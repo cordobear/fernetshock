@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Lo malo de ser bueno </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header>
+    <a href="../../index.html">
+    <img src="../../banner.jpg" alt="Banner Fernet Shock">
+    </a>
+</header>
+<div class="perla">
+    <h2 class="texto-destacado panda bora perla">Lo malo de ser bueno</h2>
+    <div class="fernet">
+  <img src="601.jpg" alt="601">
+  <img src="602.jpg" alt="602">
+  <img src="603.jpg" alt="603">
+  <img src="604.jpg" alt="604">
+  <img src="605.jpg" alt="605">
+  <img src="606.jpg" alt="606">
+  <img src="607.jpg" alt="607">
+  <img src="608.jpg" alt="608">
+  <img src="609.jpg" alt="609">
+  <img src="610.jpg" alt="610">
+  <div class="navegacion">
+  <a href="../erks05/erks05.html" class="boton-navegacion">Acá hay algo raro</a>
+  <a href="../erks07/erks07.html" class="boton-navegacion">El especial del 31 de Octubre</a>
+</div>
+</div>
+<div id="footer"></div>
+<script>
+  fetch('../../footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+</body>
+</html>
+
